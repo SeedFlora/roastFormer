@@ -3,12 +3,18 @@
 !/.gitignore
 !/README.md
 !/requirements.txt
+!/requirements-baselines.txt
+!/Dockerfile
+!/.dockerignore
+!/compose.yaml
+!/compose.gpu.yaml
 !/crackdl/
 
 /crackdl/*
 !/crackdl/aggregate.py
 !/crackdl/bench.py
 !/crackdl/data.py
+!/crackdl/docker_smoke.py
 !/crackdl/models_cnn.py
 !/crackdl/models_ssl.py
 !/crackdl/models_ssm.py

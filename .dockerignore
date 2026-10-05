@@ -1,0 +1,23 @@
+# Deny by default: only reviewed source and dependency files reach the builder.
+**
+!Dockerfile
+!.dockerignore
+!requirements.txt
+!requirements-baselines.txt
+!crackdl/
+crackdl/**
+!crackdl/aggregate.py
+!crackdl/bench.py
+!crackdl/data.py
+!crackdl/docker_smoke.py
+!crackdl/models_cnn.py
+!crackdl/models_ssl.py
+!crackdl/models_ssm.py
+!crackdl/models_transformer.py
+!crackdl/prep.py
+!crackdl/registry.py
+!crackdl/roastformer.py
+!crackdl/run_all.py
+!crackdl/smoke.py
+!crackdl/stats.py
+!crackdl/train.py

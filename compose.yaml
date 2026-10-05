@@ -1,0 +1,24 @@
+services:
+  roastformer:
+    image: roastformer:cpu
+    build:
+      context: .
+      args:
+        PYTORCH_INDEX_URL: https://download.pytorch.org/whl/cpu
+        INSTALL_BASELINES: "0"
+    init: true
+    volumes:
+      - type: bind
+        source: ./coffee-roasting-acoustic-dataset
+        target: /app/coffee-roasting-acoustic-dataset
+        read_only: true
+        bind:
+          create_host_path: false
+      - feature-cache:/app/crackdl/cache
+      - experiment-results:/app/crackdl/results
+      - model-checkpoints:/app/crackdl/ckpt
+
+volumes:
+  feature-cache:
+  experiment-results:
+  model-checkpoints:

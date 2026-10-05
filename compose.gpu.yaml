@@ -1,0 +1,13 @@
+services:
+  roastformer:
+    image: roastformer:cuda128
+    build:
+      args:
+        PYTORCH_INDEX_URL: https://download.pytorch.org/whl/cu128
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
